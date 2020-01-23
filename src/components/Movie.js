@@ -19,7 +19,6 @@ function Movie({year,title,summary,poster,genres}) {
         <p className="movie_summary">{summary.slice(0,180)}...</p>
         </div>
     </div>
-
     )
 }
 
