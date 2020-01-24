@@ -1,7 +1,12 @@
 import React from "react";
 
-function About() {
-    return <span>About this page</span>
+function About(props) {
+    console.log(props);
+    return (
+        <div className="about">
+            <span>About this page</span>
+        </div>
+    )
 }
 
 export default About;
