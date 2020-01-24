@@ -6,17 +6,17 @@ import "./Movie.css";
 
 function Movie({id,year,title,summary,poster,genres}) {
     return (
-    <Link to={{
-        pathname: `/movie/${id}`,
-        state: {
-            year:year,
-            title:title,
-            summary,
-            poster,
-            genres
-        }
-    }}>
     <div className="movie">
+        <Link to={{
+            pathname: `/movie/${id}`,
+            state: {
+             year:year,
+             title:title,
+             summary,
+             poster,
+             genres
+            }
+        }}>
         <img src={poster} alt={title} title={title}></img>
         <div className="movie_data">
             <h3 className="movie_title">{title}</h3>
@@ -29,8 +29,8 @@ function Movie({id,year,title,summary,poster,genres}) {
         </ul>
         <p className="movie_summary">{summary.slice(0,180)}...</p>
         </div>    
+        </Link>
     </div>
-    </Link>
     )
 }
 
